@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="card splash-card">
+      <div class="container">
+        <div class="jumbotron">
+          <img src="logo.svg">
+          <form>
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1">
+                <input type="text" class="col-sm-6 input-lg col-sm-offset-0 form-control" placeholder="Search for startup advice..."/>
+              </div>
+            </div>
+          </form>
+          <!-- <h1>StartupGrid</h1> -->
+        </div>
+      </div>
+    </div>
+    <div class="card white">
+      <h1 class="fieldset-title">Product &amp; Design</h1>
+      <div class="fieldset">
+        <div class="subtopic-card">Design</div>
+        <div class="subtopic-card">UI/UX</div>
+        <div class="subtopic-card">Conversion</div>
+        <div class="subtopic-card">A/B Testing</div>
+        <div class="subtopic-card">Copywriting</div>
+        <div class="subtopic-card">Development</div>
+        <div class="subtopic-card">Pricing</div>
+        <div class="subtopic-card">Product Management</div>
+        <div class="subtopic-card">Features</div>
+        <div class="subtopic-card">User Engagement</div>
+        <div class="subtopic-card">Usability</div>
+        <div class="subtopic-card">Rapid Prototyping</div>
+        <div class="subtopic-card">Beta</div>
+        <div class="subtopic-card">Landing Page</div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="Please.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $('.card').css('min-height', window.innerHeight);
+        $('.subtopic-card').each(function(i, e) {
+          var $e = $(e);
+          var normal = {
+            value: 0.99,
+            saturation: .1,
+            seed: e.innerHTML
+          };
+          var hover = $.extend(normal);
+          hover.saturation = .2;
+          normal = Please.make_color(normal);
+          hover = Please.make_color(hover);
+          $e.css('background-color', normal);
+          $e.hover(function() { $e.css('background-color', hover); }, function() { $e.css('background-color', normal); });
+        });
+      });
+    </script>
+  </body>
+</html>

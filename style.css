@@ -1,0 +1,57 @@
+body {
+  background: #49BEA3;
+}
+
+.jumbotron {
+  background: transparent;
+  border-radius: 0px;
+}
+
+.white {
+  background: white;
+}
+
+.card {
+  padding: 100px;
+}
+
+h1.fieldset-title {
+  font-size: 50px;
+}
+
+.fieldset {
+  background: #49BEA3;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.subtopic-card {
+  width: 180px;
+  height: 260px;
+  background: white;
+  border-radius: 3px;
+  float: left;
+  margin: 20px;
+  padding: 14px;
+  font-size: 25px;
+}
+
+form input.form-control {
+  background: #49bea3;
+  border: 2px solid white;
+  color: white;
+  /*font-size: 20px;*/
+  /*padding: 10px;*/
+}
+
+form input.form-control:focus {
+  border: 2px solid white;
+}
+
+form input.form-control::-webkit-input-placeholder {
+   color: #EEE;
+}
+
+.splash-card {
+  padding-top: 150px;
+}
